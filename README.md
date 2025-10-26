@@ -16,10 +16,10 @@ The project focuses on two key OS concepts: analyzing the binary structure (`myE
     * **Low-Level Control:** Handles segment alignment, sets correct memory **Protection Flags** (R/W/X), and transfers control to the loaded code's entry point via **Assembly glue code**.
   
 ## ⚙️ Running & Building Instructions
-This section details how to build and execute the C-ELF Toolchain utilities on a Linux/Unix 32-bit environment.
-The project requires **GCC** (with the `-m32` flag) and **NASM** for the Assembly code.
-To build, first assemble the glue code: `nasm -f elf start.s -o start.o` and `nasm -f elf startup.s -o startup.o`. 
-Next, compile and link the `loader` using the custom linker script: `gcc -g -m32 loader.c start.o startup.o -o loader -T linking_script`.
-Separately, compile the analyzer: `gcc -g -m32 myELF.c -o myELF`. 
-The built executables are ready to run against the provided test files: The **Static Program Loader** runs with `./loader loadme [OPTIONAL_ARGS]`,
-and the **ELF Analyzer** is run via a menu with `./myELF` (where you can load and merge test object files like **`F1a.o`** and **`F2a.o`**).
+* This section details how to build and execute the C-ELF Toolchain utilities on a Linux/Unix 32-bit environment.
+* The project requires **GCC** (with the `-m32` flag) and **NASM** for the Assembly code.
+* To build, first assemble the glue code: `nasm -f elf start.s -o start.o` and `nasm -f elf startup.s -o startup.o`. 
+* Next, compile and link the `loader` using the custom linker script: `gcc -g -m32 loader.c start.o startup.o -o loader -T linking_script`.
+* Separately, compile the analyzer: `gcc -g -m32 myELF.c -o myELF`. 
+* The built executables are ready to run against the provided test files: The **Static Program Loader** runs with `./loader loadme [OPTIONAL_ARGS]`,
+* The **ELF Analyzer** is run via a menu with `./myELF` (where you can load and merge test object files like **`F1a.o`** and **`F2a.o`**).
