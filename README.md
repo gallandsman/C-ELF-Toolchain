@@ -2,8 +2,8 @@
 
 ## 📘 Project Overview
 
-This is a set of **Low-Level C programs** built to understand and manipulate the core file structure of executables (ELF).
-The project focuses on two key OS concepts: analyzing the binary structure (`myELF.c`) and implementing a static program loader (`loader.c`) that directly manages memory.
+* This is a set of **Low-Level C programs** built to understand and manipulate the core file structure of executables (ELF).
+* The project focuses on two key OS concepts: analyzing the binary structure (`myELF.c`) and implementing a static program loader (`loader.c`) that directly manages memory.
 
 ## 🧩 Components & Features
 
